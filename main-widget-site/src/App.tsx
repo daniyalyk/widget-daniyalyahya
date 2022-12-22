@@ -29,8 +29,10 @@ function App() {
 
   return (
     <div className='App'>
-      <h1>Parent Website</h1>
-      <div id='my-widget-container' owner-data={JSON.stringify(ownerData)}></div>
+      <div className='App-header'>
+        <h1>Parent Website</h1>
+        <div id='my-widget-container' owner-data={JSON.stringify(ownerData)}></div>
+      </div>
     </div>
   );
 }
