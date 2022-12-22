@@ -1,0 +1,6 @@
+.box {
+  margin: 1rem;
+  /* border: dotted; */
+  min-height: 100%;
+  padding: 1rem;
+}
