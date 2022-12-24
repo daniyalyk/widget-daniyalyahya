@@ -16,9 +16,9 @@ function App() {
     const scriptRuntime = document.createElement("script");
     const scriptChunk = document.createElement("script");
     const scriptMain = document.createElement("script");
-    scriptRuntime.src = "http://localhost:5000/static/js/my-widget.js";
-    scriptChunk.src = "http://localhost:5000/static/js/my-widget.2.js";
-    scriptMain.src = "http://localhost:5000/static/js/my-widget.main.js";
+    scriptRuntime.src = "http://localhost:3001/static/js/my-widget.js";
+    scriptChunk.src = "http://localhost:3001/static/js/my-widget.2.js";
+    scriptMain.src = "http://localhost:3001/static/js/my-widget.main.js";
     const container = document.getElementById("my-widget-container");
     (container as HTMLElement).appendChild(scriptRuntime);
     (container as HTMLElement).appendChild(scriptChunk);
