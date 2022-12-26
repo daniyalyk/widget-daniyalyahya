@@ -22,7 +22,7 @@ export const Widget: React.FC<IProps> = ({ id }) => {
   }
   const wrapper: HTMLElement | null = document.getElementById(id);
   const ownerData: any = wrapper
-    ? ((wrapper as HTMLDivElement).getAttribute("owner-data") as string).length > 0
+    ? ((wrapper as HTMLDivElement).getAttribute("owner-data") as string)?.length > 0
       ? JSON.parse((wrapper as HTMLDivElement).getAttribute("owner-data") as string)
       : ""
     : "";

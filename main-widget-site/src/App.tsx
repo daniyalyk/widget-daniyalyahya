@@ -13,9 +13,13 @@ function App() {
     api: "https://us-central1-fir-apps-services.cloudfunctions.net/transactions",
   };
   React.useEffect(() => {
-    const scriptRuntime = document.createElement("script");
-    const scriptChunk = document.createElement("script");
-    const scriptMain = document.createElement("script");
+    const scriptRuntime = document.getElementById("script1") as any;
+    const scriptChunk = document.getElementById("script2") as any;
+    const scriptMain = document.getElementById("script3") as any;
+
+    // const scriptRuntime = document.createElement("script");
+    // const scriptChunk = document.createElement("script");
+    // const scriptMain = document.createElement("script");
     scriptRuntime.src = "http://localhost:3001/static/js/my-widget.js";
     scriptChunk.src = "http://localhost:3001/static/js/my-widget.2.js";
     scriptMain.src = "http://localhost:3001/static/js/my-widget.main.js";
