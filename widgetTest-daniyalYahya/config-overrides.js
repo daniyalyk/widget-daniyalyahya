@@ -6,7 +6,7 @@ module.exports = function override(config, env) {
     output: {
       filename: "static/js/my-widget.js",
       chunkFilename: "static/js/my-widget.[name].js",
-      path: "D:\\FRT\\widgetTest-daniyalyahya\\widgetTest-daniyalYahya\\widgettest-daniyalyahya\\build",
+      path: `${path.dirname(__dirname)}\\widgetTest-daniyalYahya\\build`,
       pathinfo: false,
       publicPath: "/",
       chunkLoadingGlobal: "webpackJsonpmy-embeddable-widget",
