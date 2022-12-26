@@ -32,7 +32,6 @@ export const Widget: React.FC<IProps> = ({ id }) => {
 
   window.addEventListener("resize", (e: any) => setScreenWidth(e.target.innerWidth));
 
-  console.log(ownerData.columns, apiData?.data?.data, ownerData.columns.slice(0, 2));
   return (
     <div className='box'>
       {ownerData === "" ? (
