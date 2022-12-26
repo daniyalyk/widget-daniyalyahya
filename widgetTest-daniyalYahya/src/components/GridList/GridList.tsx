@@ -65,7 +65,6 @@ const SingleListItem = (col: any, primaryText: string, secondaryText: string) =>
   );
 };
 export const GridList = ({ columns, data }: IProps) => {
-  console.log({ columns }, { data });
   return (
     <List sx={{ width: "100%", bgcolor: "background.paper" }}>
       {data?.map((item: any, index: number) => {
