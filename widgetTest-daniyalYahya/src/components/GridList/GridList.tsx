@@ -5,9 +5,9 @@ interface IProps {
   data: Array<any>;
 }
 
-const SingleListItem = (col: any, primaryText: string, secondaryText: string) => {
+const SingleListItem = (col: any, primaryText: string, secondaryText: string, index: number) => {
   return (
-    <>
+    <a key={index}>
       <ListItem alignItems='center'>
         <ListItemText
           primary={
@@ -61,14 +61,14 @@ const SingleListItem = (col: any, primaryText: string, secondaryText: string) =>
         />
       </ListItem>
       <Divider variant='inset' component='li' />
-    </>
+    </a>
   );
 };
 export const GridList = ({ columns, data }: IProps) => {
   return (
     <List sx={{ width: "100%", bgcolor: "background.paper" }}>
       {data?.map((item: any, index: number) => {
-        return SingleListItem(columns, item.name, item.date);
+        return SingleListItem(columns, item.name, item.date, index);
       })}
     </List>
   );
