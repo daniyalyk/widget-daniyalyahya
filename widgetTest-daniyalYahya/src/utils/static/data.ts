@@ -33,3 +33,14 @@ export const columns: Array<staticColumn> = [
   { label: "Column4", key: "column4", type: "number" },
   { label: "Column5", key: "column5", type: "date" },
 ];
+
+export const ownerData_static: ApiData = {
+  columns: [
+    { label: "Name", key: "name", type: "string" },
+    { label: "Date", key: "date", type: "date" },
+    { label: "Category", key: "category", type: "string" },
+    { label: "Amount", key: "amount", type: "number" },
+    { label: "Created At", key: "created_at", type: "date" },
+  ],
+  api: "https://us-central1-fir-apps-services.cloudfunctions.net/transactions",
+};
