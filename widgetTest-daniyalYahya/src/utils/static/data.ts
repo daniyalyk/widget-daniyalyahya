@@ -27,9 +27,9 @@ export const rows: Array<staticRow> = [
   },
 ];
 export const columns: Array<staticColumn> = [
-  { label: "Name", key: "name", type: "string" },
-  { label: "Date", key: "date", type: "date" },
-  { label: "Category", key: "category", type: "string" },
-  { label: "Amount", key: "amount", type: "number" },
-  { label: "Created At", key: "created_at", type: "date" },
+  { label: "Column1", key: "column1", type: "string" },
+  { label: "Column2", key: "column2", type: "date" },
+  { label: "Column3", key: "column3", type: "string" },
+  { label: "Column4", key: "column4", type: "number" },
+  { label: "Column5", key: "column5", type: "date" },
 ];

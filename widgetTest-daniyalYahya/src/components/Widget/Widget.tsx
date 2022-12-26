@@ -32,19 +32,20 @@ export const Widget: React.FC<IProps> = ({ id }) => {
 
   window.addEventListener("resize", (e: any) => setScreenWidth(e.target.innerWidth));
 
+  console.log(ownerData.columns, apiData?.data?.data, ownerData.columns.slice(0, 2));
   return (
     <div className='box'>
       {ownerData === "" ? (
         screenWidth > 700 ? (
           <GridTable columns={columns} data={rows} />
         ) : (
-          <GridList columns={columns} data={rows} />
+          <GridList columns={columns.slice(0, 2)} data={rows} />
         )
       ) : apiStatus === 200 ? (
         screenWidth > 700 ? (
           <GridTable columns={ownerData?.columns} data={apiData?.data?.data} />
         ) : (
-          <GridList columns={ownerData?.columns} data={apiData?.data?.data} />
+          <GridList columns={ownerData?.columns.slice(0, 2)} data={apiData?.data?.data} />
         )
       ) : (
         <ProgressBar />
