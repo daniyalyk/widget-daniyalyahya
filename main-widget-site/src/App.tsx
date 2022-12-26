@@ -13,6 +13,10 @@ function App() {
     api: "https://us-central1-fir-apps-services.cloudfunctions.net/transactions",
   };
   React.useEffect(() => {
+    // const scriptRuntime = document.getElementById("script1") as any;
+    // const scriptChunk = document.getElementById("script2") as any;
+    // const scriptMain = document.getElementById("script3") as any;
+
     const scriptRuntime = document.createElement("script");
     const scriptChunk = document.createElement("script");
     const scriptMain = document.createElement("script");
@@ -20,11 +24,9 @@ function App() {
     scriptChunk.src = "http://localhost:3001/static/js/my-widget.2.js";
     scriptMain.src = "http://localhost:3001/static/js/my-widget.main.js";
     const container = document.getElementById("my-widget-container");
-    (container as HTMLElement).appendChild(scriptRuntime);
-    (container as HTMLElement).appendChild(scriptChunk);
-    (container as HTMLElement).appendChild(scriptMain);
-
-    return () => {};
+    (container as HTMLElement)?.appendChild(scriptRuntime);
+    (container as HTMLElement)?.appendChild(scriptChunk);
+    (container as HTMLElement)?.appendChild(scriptMain);
   }, []);
 
   return (
