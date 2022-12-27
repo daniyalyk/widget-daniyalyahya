@@ -5,9 +5,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+const myRoot = ReactDOM.createRoot(document.getElementById("my-component-root") as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <>{myRoot.render(<App />)}</>
   </React.StrictMode>
 );
 
