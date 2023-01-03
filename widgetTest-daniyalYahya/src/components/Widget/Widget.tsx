@@ -1,10 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { ProgressBar, GridTable, GridList } from "../../components";
-import {
-  // rows, columns,
-  ownerData_static,
-} from "../../utils/static";
+import { ownerData_static } from "../../utils/static";
 import "./style.css";
 interface IProps {
   id: any;
@@ -35,7 +32,6 @@ export const Widget: React.FC<IProps> = ({ id }) => {
   }
   React.useEffect(() => {
     getApiData();
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -46,9 +42,7 @@ export const Widget: React.FC<IProps> = ({ id }) => {
         screenWidth > 700 ? (
           <GridTable columns={ownerData_static.columns} data={apiData?.data?.data} />
         ) : (
-          // <GridTable columns={columns} data={rows} />
           <GridList columns={ownerData_static.columns.slice(0, 2)} data={apiData?.data?.data} />
-          // <GridList columns={columns.slice(0, 2)} data={rows} />
         )
       ) : apiStatus === 200 ? (
         screenWidth > 700 ? (
