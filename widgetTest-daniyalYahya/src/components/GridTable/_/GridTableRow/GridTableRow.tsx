@@ -3,13 +3,14 @@ import { TableCell, TableRow } from "@mui/material";
 
 interface IProps {
   row: ReturnType<any>;
+  key: number;
 }
 export const GridTableRow = (props: IProps) => {
-  const { row } = props;
+  const { row, key } = props;
 
   return (
     <React.Fragment>
-      <TableRow>
+      <TableRow key={key}>
         <TableCell align='center'>{row.name}</TableCell>
         <TableCell align='center'>{row.date}</TableCell>
         <TableCell align='center'>{row.category}</TableCell>
