@@ -20,10 +20,6 @@ interface IProps {
 export const GridTable = ({ columns, data }: IProps) => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const rows = data?.map((item: any, index: number) => {
-    return createData(item.name, item.date, item.category, item.amount, item.created_at);
-  });
-  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 
   const createData = (
     name: string,
@@ -40,6 +36,10 @@ export const GridTable = ({ columns, data }: IProps) => {
       created_at,
     };
   };
+  const rows = data?.map((item: any, index: number) => {
+    return createData(item.name, item.date, item.category, item.amount, item.created_at);
+  });
+  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
   const handleChangePage = (event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
     setPage(newPage);
   };
